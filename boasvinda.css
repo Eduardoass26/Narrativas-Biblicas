@@ -71,7 +71,7 @@
     border-radius: 20px;
   }
   
-  .right video {
+  .right iframe {
     width: 50vw;
     max-height: 100%;
     border-radius: 20px;
@@ -94,7 +94,7 @@
       padding: 20px;
     }
   
-    .right video {
+    .right iframe {
       width: 100%;
       border-radius: 0 0 12px 12px;
     }
@@ -109,7 +109,7 @@
       font-size: 1em;
     }
   
-    .right video {
+    .right iframe {
       width: 100%;
     }
   }
