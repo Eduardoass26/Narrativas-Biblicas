@@ -1,0 +1,116 @@
+/* Reset e configuração geral */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-image: url("fundo.png");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+  }
+  
+  /* Container principal */
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 12px;
+    box-shadow: 5 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 20px;
+  }
+  
+  /* Estilos para a coluna esquerda (texto e logo) */
+  .left {
+    flex: 1;
+    padding: 40px;
+    background-color: #707171;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 20px;
+  }
+  
+  .left .logo {
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .left h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .left p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    max-width: 90%;
+  }
+  
+  /* Estilos para a coluna direita (vídeo) */
+  .right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fafafa;
+    border-radius: 20px;
+  }
+  
+  .right video {
+    width: 50vw;
+    max-height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    border: 2px solid black;
+
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .left {
+      padding: 20px;
+    }
+  
+    .right {
+      padding: 20px;
+    }
+  
+    .right video {
+      width: 100%;
+      border-radius: 0 0 12px 12px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .left h1 {
+      font-size: 2em;
+    }
+  
+    .left p {
+      font-size: 1em;
+    }
+  
+    .right video {
+      width: 100%;
+    }
+  }
+  

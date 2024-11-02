@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="home.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Narrativas Bíblicas</title>
+  </head>
+  <body>
+    <header>
+      <img src="public/imgs/logo/logo.png" alt="Logo do Site" class="logo" />
+      <nav>
+       
+        <a href="boasvindas.html">
+          <button>boas vindas</button>
+        </a>
+        <a href="aprendizados.html">
+          <button>Aprendizados</button>
+        </a>
+        <a href="curiosidades.html">
+          <button>Curiosidades Bíblicas</button>
+        </a>
+      </nav>
+    </header>
+
+    <section class='welcome'>
+      <h1 class="title">NARRATIVAS BÍBLICAS</h1>
+      <p class="description">
+      Venha conhecer o site Narrativas Bíblicas! Descubra as histórias épicas contadas 
+      na Bíblia, estude e aprenda com reflexões profundas sobre os relatos bíblicos
+       . Um espaço para mergulhar na sabedoria e 
+       nos ensinamentos que atravessam os séculos!
+      </p>
+
+      <audio controls autoplay loop>
+        <source src="Text to Speech (2).wav" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+      </audio>
+      
+      <section class="slider">
+        <div class="slider-container" id="sliderContainer"></div>
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        <a href="https://eduardoass26.github.io/narrativas-biblicas/characterhistory.html"><button id="leia">Leia</button></a>
+      </section>
+    
+    </section>
+    
+    
+    <script >
+     const audio = document.querySelector('audio');
+     audio.play();
+    const images = [
+      { src: "public/imgs/imgs_slider/Genesis_1.jpg" },
+      { src: "public/imgs/imgs_slider/moises-sarsa-ardente.png" },
+      { src: "public/imgs/imgs_slider/slider.webp"},
+      { src: "public/imgs/imgs_slider/laws-on-stone-8791423_1280.png"},
+      { src: "public/imgs/imgs_slider/sansaotemplo.jpg"},
+      { src: "public/imgs/imgs_slider/ssaul.png"},
+      { src: "public/imgs/imgs_slider/eliassendolevado.jpg"},
+      { src: "public/imgs/imgs_slider/eliaseeliseu.jpg"},
+      { src: "public/imgs/imgs_slider/Eduardo_Assuncao_Da_Silva_Two_angels_standing_before_the_city_of_Sodom_and_G_c543171f-ec35-40c8-940e-c0b00eea5664.png" },
+      { src: "public/imgs/imgs_slider/tomb-8622722.jpg" },
+      { src: "public/imgs/imgs_slider/Eduardo_Assuncao_Da_Silva_God_appearing_to_Abram_in_a_field,_surrounded_by_l_93ce4fc3-8360-405b-8d42-434134321910.png" },
+      { src: "public/imgs/imgs_slider/noahs-ark-8769317.png" },
+      { src: "public/imgs/imgs_slider/daviegolias.jpg"},
+      { src: "public/imgs/imgs_slider/caim_e_abel.png" },
+      { src: "public/imgs/imgs_slider/ai-generated-8701833.png"},
+      { src: "public/imgs/imgs_slider/ascençãodavi.png" }
+    ];
+    
+    let currentSlide = 0;
+    
+    function initializeSlider() {
+    const sliderContainer = document.getElementById('sliderContainer');
+    
+    images.forEach((image, index) => {
+      const slide = document.createElement('div');
+      slide.classList.add('slide');
+      if (index === 0) slide.classList.add('active'); // Define o primeiro slide como ativo
+    
+      const img = document.createElement('img');
+      img.src = image.src;
+      img.style.width = '100%'; // Ajusta o tamanho conforme necessário
+      img.style.height = 'auto';
+    
+      slide.appendChild(img);
+      sliderContainer.appendChild(slide);
+    });
+    }
+    
+    function showSlide(index) {
+    const slides = document.querySelectorAll('.slide');
+    
+    if (index >= slides.length) {
+      currentSlide = 0;
+    } else if (index < 0) {
+      currentSlide = slides.length - 1;
+    } else {
+      currentSlide = index;
+    }
+    
+    slides.forEach((slide) => slide.classList.remove('active'));
+    slides[currentSlide].classList.add('active');
+    }
+    
+    function changeSlide(direction) {
+    showSlide(currentSlide + direction);
+    }
+    
+    // Inicializa o slider ao carregar a página
+    document.addEventListener('DOMContentLoaded', () => {
+    initializeSlider();
+    showSlide(currentSlide);
+    });
+    </script>
+  </body>
+  
+ 
+</html>
