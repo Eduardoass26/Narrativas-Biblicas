@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Quiz.css">
+    <title>Quiz</title>
+</head>
+<body>
+    <div class="quiz">
+
+        <div class="questionbox">
+            <h1>Quiz Bíblico</h1>
+            <p id="score">aqui a pontuação</p>
+            <p id="question">aqui vai o enunciado da pergunta</p>
+            <p class="red">Você tem apenas uma chance pense bem antes de responder</p>
+        </div>
+
+        <div class="answerbox">
+            <p id="answer1" onclick="checkAnswer(1)">aqui o usuario seleciona uma resposta</p>
+            <p id="answer2" onclick="checkAnswer(2)">aqui o usuario seleciona uma resposta</p>
+            <p id="answer3" onclick="checkAnswer(3)">aqui o usuario seleciona uma resposta</p>
+            <p id="answer4" onclick="checkAnswer(4)">aqui o usuario seleciona uma resposta</p>
+        </div>
+
+    </div>
+    <script src="Quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+/* Quiz.css */
+.red{
+    color: red;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+.quiz {
+    background-color: #fff; /* Cor branca */
+    
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.quiz {
+    width: 90%;
+    max-width: 600px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 2em;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2em;
+    color: #4a90e2;
+    margin-bottom: 1em;
+}
+
+.questionbox p {
+    font-size: 1.1em;
+    margin-bottom: 1em;
+    color: #333;
+}
+
+.answerbox {
+    display: grid;
+    gap: 1em;
+}
+
+.answerbox p {
+    padding: 1em;
+    background-color: #e0e7ff;
+    border: 2px solid #4a90e2;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 1em;
+    color: #4a90e2;
+}
+
+.answerbox p:hover {
+    background-color: #4a90e2;
+    color: #fff;
+}
+
+.answerbox p:active {
+    background-color: #1e65b1;
+    color: #fff;
+    transform: scale(0.98);
+}
+
+.questionbox p:last-child {
+    font-size: 0.9em;
+    color: #888;
+    margin-top: 1em;
+}
