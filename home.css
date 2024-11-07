@@ -30,6 +30,7 @@ header {
   height: 100px;
   top: 0;
   z-index: 1000;
+  
 }
 
 .logo {
@@ -202,9 +203,10 @@ a {
 @media (max-width: 768px) { /* Ajusta para tablets */
   header{
     height: auto;
+
   }
   .welcome{
-    margin-top: 100px;
+    margin-top: 200px;
   }
   .slider {
     width: 90%; /* Ocupa quase toda a largura em telas menores */
@@ -227,7 +229,7 @@ a {
 
   /* Ajusta a logo para celulares */
   .logo {
-    height: 100px; /* Reduz o tamanho da logo */
+    height: 200px; 
     margin-top: 20px; /* Ajusta a margem superior */
   }
 
@@ -243,9 +245,11 @@ a {
   }
   header{
     height: auto;
+    justify-content: space-between;
   }
   .slide img {
     height: 250px; /* Reduz ainda mais a altura */
+   
   }
 
   button.prev, button.next {
@@ -261,7 +265,7 @@ a {
 
   /* Ajusta a logo para smartphones */
   .logo {
-    height: 100px; /* Reduz ainda mais o tamanho da logo */
+    height: 200px; 
     margin-top: 10px; /* Ajusta a margem superior */
   }
 }

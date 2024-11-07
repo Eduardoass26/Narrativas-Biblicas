@@ -1419,7 +1419,13 @@ const questions = [
       
 ];
 
+alert(`"Descubra o quanto você conhece das grandes histórias da Bíblia!"
 
+  Você acha que conhece bem as narrativas e os personagens da Bíblia? Que tal colocar seu conhecimento à prova e explorar o universo bíblico de uma maneira divertida e desafiadora? Participe do nosso Quiz Interativo! Em cada pergunta, você poderá relembrar histórias inspiradoras, momentos marcantes e curiosidades únicas da Bíblia.
+  
+  Venha testar seu conhecimento e aprender algo novo em cada resposta. Este é o momento perfeito para descobrir o quanto você já sabe e para se inspirar a conhecer ainda mais sobre a Palavra!
+  
+  Aceite o desafio e embarque nessa jornada de conhecimento bíblico!`)
 let currentQuestionIndex = 0;
 let score = 0;
 let usedQuestions = [];
@@ -1448,6 +1454,8 @@ function loadQuestion() {
         document.getElementById("answer2").textContent = shuffledAnswers[1];
         document.getElementById("answer3").textContent = shuffledAnswers[2];
         document.getElementById("answer4").textContent = shuffledAnswers[3];
+
+       
     } else {
         endQuiz();
     }
