@@ -1425,7 +1425,8 @@ alert(`"Descubra o quanto você conhece das grandes histórias da Bíblia!"
   
   Venha testar seu conhecimento e aprender algo novo em cada resposta. Este é o momento perfeito para descobrir o quanto você já sabe e para se inspirar a conhecer ainda mais sobre a Palavra!
   
-  Aceite o desafio e embarque nessa jornada de conhecimento bíblico!`)
+  Aceite o desafio e embarque nessa jornada de conhecimento bíblico!`);
+
 let currentQuestionIndex = 0;
 let score = 0;
 let usedQuestions = [];
@@ -1454,8 +1455,6 @@ function loadQuestion() {
         document.getElementById("answer2").textContent = shuffledAnswers[1];
         document.getElementById("answer3").textContent = shuffledAnswers[2];
         document.getElementById("answer4").textContent = shuffledAnswers[3];
-
-       
     } else {
         endQuiz();
     }
@@ -1480,7 +1479,16 @@ function checkAnswer(answerIndex) {
 
 function endQuiz() {
     alert(`Fim do Quiz! Seu score final: ${score} de 20`);
-    // Você pode adicionar código aqui para reiniciar o quiz ou redirecionar para outra página.
+    resetQuiz(); // Reinicia o quiz após terminar
+}
+
+function resetQuiz() {
+    // Redefine as variáveis principais
+    currentQuestionIndex = 0;
+    score = 0;
+    usedQuestions = [];
+    
+    loadQuestion(); // Recarrega a primeira pergunta
 }
 
 function shuffleArray(array) {
@@ -1490,6 +1498,7 @@ function shuffleArray(array) {
     }
     return array;
 }
+
 function blinkQuiz(color) {
     const quizContainer = document.querySelector('.quiz');
     quizContainer.style.transition = 'background-color 0.2s ease';
