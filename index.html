@@ -8,21 +8,18 @@
   </head>
   <body>
     <header>
-      <img src="public/imgs/logo/logo.png" alt="Logo do Site" class="logo" />
-      <nav>
-        <a href="quiz.html">
-          <button>Quiz Biblico</button>
-        </a>
-        <a href="boasvindas.html">
-          <button>boas vindas</button>
-        </a>
-        <a href="aprendizados.html">
-          <button>Aprendizados</button>
-        </a>
-        <a href="curiosidades.html">
-          <button>Curiosidades Bíblicas</button>
-        </a>
-      </nav>
+      <header>
+        <img src="public/imgs/logo/logo.png" alt="Logo do Site" class="logo" />
+        <nav>
+          <button class="menu-toggle">Menu</button>
+          <div class="menu-links">
+            <a href="quiz.html">Quiz Bíblico</a>
+            <a href="boasvindas.html">Boas Vindas</a>
+            <a href="aprendizados.html">Aprendizados</a>
+            <a href="curiosidades.html">Curiosidades Bíblicas</a>
+          </div>
+        </nav>
+      </header>
     </header>
 
     <section class='welcome'>
@@ -115,6 +112,16 @@
     initializeSlider();
     showSlide(currentSlide);
     });
+    
+    document.addEventListener('DOMContentLoaded', function () {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const menuLinks = document.querySelector('.menu-links');
+  
+  menuToggle.addEventListener('click', function () {
+    menuLinks.style.display = menuLinks.style.display === 'flex' ? 'none' : 'flex';
+  });
+});
+
     </script>
   </body>
   
